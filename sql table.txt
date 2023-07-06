@@ -1,0 +1,141 @@
+CREATE DATABASE sqlcommon_task1;
+use sqlcommon_task1;
+CREATE TABLE Customers (
+    CustomerID INT ,
+    Name VARCHAR(50),
+    Age INT,
+    Email VARCHAR(20),
+    Phone VARCHAR(15),
+    Address VARCHAR(100),
+    date_purchased date ,
+    in_time timestamp,
+    out_time timestamp,
+    social_media VARCHAR(50),
+    primary key (CustomerID,date_purchased)
+);
+INSERT INTO Customers (CustomerID, Name, Age, Email, Phone, Address,date_purchased,in_time,out_time,social_media)
+VALUES (11, 'raj', 20, 'raj@email.com', '9445888012', 'kk nagar street','2023-03-02', '2023-05-05 10:10:18', '2023-05-05 11:20:00','telegram'),
+       (11, 'raj', 20, 'raj@email.com', '9445888012', 'kk nagar street','2023-04-10', '2023-04-20 12:01:15', '2023-04-20 17:20:00','facebook'),
+       (11, 'raj', 20, 'raj@email.com', '9445888012', 'kk nagar street','2023-03-7', '2023-03-18 14:00:00', '2023-03-18 18:45:10','youtube'),
+
+       (12, 'jagadesh', 25, 'jagadesh@email.com', '8234567890', 'tnagar','2023-01-05', '2023-06-09 09:00:00', '2023-06-09 12:00:50','twitter'),
+       (12, 'jagadesh', 25, 'jagadesh@email.com', '8234567890', 'tnagar','2023-07-20', '2023-03-20 11:10:00', '2023-03-20 12:10:00','youtube'),
+       (12, 'jagadesh', 25, 'jagadesh@email.com', '8234567890', 'tnagar','2023-05-07', '2023-05-07 18:00:00', '2023-05-07 19:00:00','instagram'),
+
+       (13, 'kumaresan', 32, 'kumaresan@email.com', '9994445587', 'raja salai','2023-09-14', '2023-03-14 14:00:00', '2023-03-14 15:00:00','instagram'),
+       (13, 'kumaresan', 32, 'kumaresan@email.com', '9994445587', 'raja salai','2023-11-11', '2023-02-11 14:45:00', '2023-02-11 15:50:20','youtube'),
+
+       (14, 'aishwarya', 28, 'aishwarya@email.com', '6458019247', 'rajiv gandhi St','2023-03-28', '2023-03-28 10:00:00', '2023-03-28 10:59:559','youtube' ),
+       (14, 'aishwarya', 28, 'aishwarya@email.com', '6458019247', 'rajiv gandhi St','2023-01-10', '2023-01-10 11:00:00', '2023-01-10 12:00:00','instagram'),
+       (14, 'aishwarya', 28, 'aishwarya@email.com', '6458019247', 'rajiv gandhi St','2023-04-24', '2023-04-24 13:00:00', '2023-04-24 15:00:00','telegram'),
+
+       (13, 'kumaresan', 32, 'kumaresan@email.com', '9994445587', 'raja salai','2023-01-15', '2023-01-15 11:00:00', '2023-01-15 12:20:10','telegram'),
+       (13, 'kumaresan', 32, 'kumaresan@email.com', '9994445587', 'raja salai','2023-05-16', '2023-05-16 10:20:00', '2023-05-16 11:20:00','youtube'),
+       (13, 'kumaresan', 32, 'kumaresan@email.com', '9994445587', 'raja salai','2023-06-10', '2023-06-10 09:00:00', '2023-06-10 10:00:00','instagram'),
+
+       (14, 'aishwarya', 28, 'aishwarya@email.com', '6458019247', 'rajiv gandhi St','2023-05-23', '2023-05-23 14:00:00', '2023-03-14 15:00:00','telegram' ),
+       (14, 'aishwarya', 28, 'aishwarya@email.com', '6458019247', 'rajiv gandhi St','2023-02-14', '2023-02-14 09:00:00', '2023-03-14 10:00:00','twitter'),
+
+       (15, 'akila', 37, 'akila@email.com', '8877447890', 'mcl colony','2023-01-06', '2023-01-06 14:00:00', '2023-01-06 16:00:00','youtube'),
+       (15, 'akila', 37, 'akila@email.com', '8877447890', 'mcl colony','2023-06-10', '2023-06-10 16:00:00', '2023-06-10 18:00:00','facebook'),
+
+       (16, 'vimal', 56, 'vim@email.com', '8877443210', ' ponmalai nagar','2023-06-07', '2023-06-07 10:00:00', '2023-06-07 11:00:00','instagram'),
+       (16, 'vimal', 56, 'vim@email.com', '8877443210', ' ponmalai nagar','2023-05-10', '2023-05-10 16:00:00', '2023-05-10 17:00:00','youtube'),
+       (16, 'vimal', 56, 'vim@email.com', '8877443210', ' ponmalai nagar','2023-01-23', '2023-01-23 14:00:00', '2023-01-23 15:00:00','telegram'),
+
+       (15, 'akila', 37, 'akila@email.com', '8877447890', 'mcl colony','2023-04-22', '2023-04-22 18:00:00', '2023-04-10 19:00:00','telegram'),
+       (15, 'akila', 37, 'akila@email.com', '8877447890', 'mcl colony','2023-05-19', '2023-05-19 20:00:00', '2023-05-19 21:00:00','twitter'),
+       (15, 'akila', 37, 'akila@email.com', '8877447890', 'mcl colony','2023-03-13', '2023-03-13 21:00:00', '2023-03-13 2:00:00','facebook'),
+
+       (17, 'priyanka', 20, 'pk@email.com', '9848478765', '2 annamalai nagar', '2023-01-03', '2023-01-03 08:00:00', '2023-01-03 02:00:00','instagram'),
+       (17, 'priyanka', 20, 'pk@email.com', '9848478765', '2 annamalai nagar', '2023-02-05', '2023-02-05 11:10:00', '2023-02-05 13:20:00','twitter'),
+
+       (18, 'Abishek', 43, 'abishek@email.com', '9234569870', ' omr beach','2023-06-09', '2023-06-09 08:00:00', '2023-06-09 09:10:00','telegram' ),
+       (18, 'Abishek', 43, 'abishek@email.com', '9234569870', 'omr beach','2023-01-20', '2023-01-20 15:10:00', '2023-01-20 17:40:00','instgram' ),
+
+       (17, 'priyanka', 20, 'pk@email.com', '9848478765', 'omr nagar', '2023-03-10', '2023-03-10 07:00:00', '2023-03-10 10:00:00','youtube'),
+       (17, 'priyanka', 20, 'pk@email.com', '9848478765', '2 annamalai nagar', '2023-04-23', '2023-04-23 7:00:00', '2023-04-23 12:20:10','facebook'),
+       (17, 'priyanka', 20, 'pk@email.com', '9848478765', '2 annamalai nagar', '2023-06-28', '2023-06-28 14:00:00', '2023-06-28 14:40:00','telegram'),
+
+       (12, 'jagadesh', 25, 'jagadesh@email.com', '8234567890', 'tnagar','2023-02-09', '2023-02-09 18:00:00', '2023-02-09 19:00:00','instagram'),
+       (12, 'jagadesh', 25, 'jagadesh@email.com', '8234567890', 'tnagar','2023-04-19', '2023-04-19 11:00:00', '2023-04-19 12:00:00','youtube'),
+
+       (16, 'vimal', 56, 'vim@email.com', '8877443210', 'ponmalai nagar','2023-04-18', '2023-04-18 18:00:00', '2023-04-10 19:00:00','telegram'),
+
+       (19, 'janani', 25, 'jaanu@email.com', '8789025481', 'vr nagar', '2023-02-13','2023-02-13 11:00:00', '2023-02-13 12:00:00','whatsapp'),
+       (19, 'janani', 25, 'jaanu@email.com', '8789025481', 'vr nagar', '2023-05-21','2023-05-21 14:00:00', '2023-05-21 15:00:00','youtube' ),
+       (19, 'janani', 25, 'jaanu@email.com', '8789025481', 'vr nagar', '2023-04-28','2023-04-28 15:00:00', '2023-04-28 16:00:00','twitter'),
+
+       (16, 'vimal', 56, 'vim@email.com', '8877443210', 'ponmalai nagar','2023-02-28', '2023-02-28 17:00:00', '2023-06-10 18:00:00','whatsapp'),
+
+       (19, 'janani', 25, 'jaanu@email.com', '8789025481', 'vr nagar', '2023-01-07','2023-01-07 09:00:00', '2023-01-07 10:00:00','youtube'),
+       (19, 'janani', 25, 'jaanu@email.com', '8789025481', 'vr nagar', '2023-06-01','2023-06-01 16:00:00', '2023-06-01 17:00:00','telegram'),
+
+       (20, 'rakesh', 26, 'rk@email.com', '9736637267', 'bharathi St','2023-05-27','2023-05-27 11:00:00', '2023-05-21 12:00:00','youtube'),
+       (20, 'rakesh', 26, 'rk@email.com', '9736637267', 'bharathi St','2023-04-21','2023-04-21 12:00:00', '2023-04-21 13:00:00','instagram'),
+
+       (21, 'arjun', 22, 'arjun@email.com', '8743274678', 'tr nagar','2023-04-21','2023-03-21 12:00:00', '2023-03-21 13:00:00','whatsapp'),
+       (21, 'arjun', 22, 'arjun@email.com', '8743274678', 'tr nagar','2023-05-13','2023-05-13 13:00:00', '2023-05-21 14:00:00','youtube'),
+       (21, 'arjun', 22, 'arjun@email.com', '8743274678', 'tr nagar','2023-04-18','2023-04-18 16:00:00', '2023-04-18 17:00:00','instagram'),
+
+       (20, 'rakesh', 26, 'rk@email.com', '9736637267', ' bharathi St','2023-06-13','2023-06-13 13:00:00', '2023-05-21 14:00:00','facebook'),
+       (20, 'rakesh', 26, 'rk@email.com', '9736637267', ' bharathi St','2023-03-18','2023-03-18 16:00:00', '2023-03-18 17:00:00','whatsapp'),
+       (20, 'rakesh', 26, 'rk@email.com', '9736637267', ' bharathi St','2023-01-19','2023-01-19 20:00:00', '2023-01-19 21:00:00','twitter'),
+
+       (21, 'arjun', 22, 'arjun@email.com', '8743274678', 'tr nagar','2023-05-27','2023-06-27 11:00:00', '2023-06-21 12:00:00','twitter'),
+       (21, 'arjun', 22, 'arjun@email.com', '8743274678', 'tr nagar','2023-02-19','2023-02-19 20:00:00', '2023-02-19 21:00:00','youtube');
+       
+       select*from customers; 
+     
+ 
+use sqlcommon_task1;
+CREATE TABLE order_table (
+orderID int,
+CustomerID int,
+foreign key(CustomerID)references customers(CustomerID),
+date_purchased date,
+productID varchar(10),
+product_name varchar(50),
+arrival_date date,
+dispatch_date date,
+sender_location varchar(20),
+receiver_location varchar(20),
+primary key (orderID,date_purchased)
+);
+INSERT INTO order_table (orderID,CustomerID, date_purchased,productID,product_name,arrival_date,dispatch_date,sender_location,receiver_location)
+VALUES	(006,12, '2023-06-09','p01','fruits','2023-06-11','2023-06-13','chennai', 'ambur'),
+		(007,12,'2023-05-05','p02','dress','2023-05-15','2023-05-28','bangalore','salem'),
+		(008,12,'2023-04-24','p03','cosmetics','2023-04-25','2023-05-05','ariyalur','trichy'),
+		(009,12,'2023-03-17','p04','snacks','2023-03-21','2023-03-25','chennai','avadi'),
+		(010,12,'2023-01-25','p05','vegetables','2023-01-30','2023-02-01','koyambedu','ariyalur'),
+                (011,13, '2023-02-09','p02','dress','2023-02-11','2023-03-13','chennai', 'punjab'),
+		(012,13,'2023-04-19','p01','fruits','2023-05-15','2023-05-28','chennai','dubai'),
+		(013,13,'2023-06-29','p05','vegetables','2023-06-30','2023-07-01','tnagr','koyambdu'),
+		(014,13,'2023-03-20','p04','snacks','2023-03-21','2023-03-25','chennai','hosur'),
+		(015,13,'2023-05-07','p03','cosmetics','2023-05-30','2023-06-20','madurai','ambur'),
+	        (016,14, '2023-03-14','p05','vegetables','2023-03-17','2023-03-19','chennai', 'hosur'),
+		(017,14,'2023-02-11','p03','cosmetics','2023-02-15','2023-05-28','trichy','ambur'),
+		(018,14,'2023-01-15','p04','snacks','2023-01-30','2023-02-01','tnagr','chennai'),
+		(019,14,'2023-05-16','p02','dress','2023-05-21','2023-05-25','salem','avadi'),
+		(020,14,'2023-06-10','p01','fruits','2023-06-15','2023-06-20','madurai','chennai'),
+	        (021,15, '2023-05-23','p04','snacks','2023-05-25','2023-05-29','chennai', 'ambattur'),
+		(022,15,'2023-02-14','p05','vegetables','2023-02-15','2023-05-28','hosur','ariyalur'),
+		(023,15,'2023-03-28','p01','fruits','2023-03-30','2023-04-01','vellore','koyambedu'),
+		(024,15,'2023-01-10','p03','cosmetics','2023-01-21','2023-05-25','hosur','avadi'),
+		(025,15,'2023-04-24','p02','dress','2023-04-27','2023-05-10','hosur','vellore'),
+	        (026,16, '2023-01-06','p01','fruits','2023-01-25','2023-01-29','chennai', 'avadi'),
+		(027,16,'2023-06-10','p03','cosmetics','2023-06-15','2023-06-28','bangalore','ariyalur'),
+		(028,16,'2023-04-22','p05','vegetables','2023-04-25','2023-04-29','tnagr','thiruvallur'),
+		(029,16,'2023-05-19','p04','snacks','2023-05-21','2023-05-25','chennai','avadi'),
+		(030,16,'2023-03-13','p02','dress','2023-03-20','2023-03-31','pattabiram','tirunelveli'),
+                (031,17, '2023-04-18','p02','dress','2023-04-25','2023-04-29','vellore', 'mangalore'),
+		(032,17,'2023-02-28','p04','snacks','2023-03-15','2023-03-28','perambur','hyderabad'),
+		(033,17,'2023-06-07','p05','vegetables','2023-06-15','2023-06-25','ariyalur','andhra'),
+		(034,17,'2023-05-10','p03','cosmetics','2023-05-23','2023-05-29','hosur','telugana'),
+		(035,17,'2023-01-23','p01','fruits','2023-01-25','2023-01-26','salem','chennai'),
+                (036,18, '2023-01-07','p05','vegetables','2023-01-15','2023-01-19','mysur', 'andhra'),
+		(037,18,'2023-02-13','p01','fruits','2023-02-15','2023-02-28','chennai','bangalore'),
+		(038,18,'2023-05-21','p04','snacks','2023-05-25','2023-05-29','tnagr','avadi'),
+		(039,18,'2023-04-28','p02','dress','2023-04-30','2023-05-10','hosur','telugana'),
+		(040,18,'2023-06-01','p03','cosmetics','2023-06-15','2023-01-27','chennai','vellore');
+        SELECT*FROM order_table;
